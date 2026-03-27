@@ -48,14 +48,78 @@ Narcissus' Lake
 - Strength
 - HP
 - Speed
+### OR Zeus - Special
+- Rise of Lightning 
 
 ### Dionysus - 
 - Special Drink
     - Healing
     - Some other buff
-- Debuff to healing
+- Debuff to 
+
+### Poseidon
+
+### Hera
+
+### Athena
+
+### Demeter
+No altar room?
+
+### Aphrodite
+
+### Hephaestus
+No altar room, maybe a shop? Maybe a whole room for Mt Etna
+
+### Ares
+Battle Room
+
+### Apollo
+
+### Artemis
+No altar room, but you see her sometimes in the labyrinth or in Crete
+
+### Hestia
+No altar room, maybe a campfire with unnamed woman?
+
+### Hermes
 
 
+Gods in later sections nicer altar and trials
+
+## Rejuvenator Healing System
+Ariadne gives you a potion made by Daedalus that converts blood into ambrosia, which will have a healing effect on the player.
+
+You can upgrade your healing potion during the runs.
+
+Dealing damage with a weapon helps refill the potion. Heavy attacks from close range fill the potion faster than light attacks from distance.
+
+Rooms can tangent you off into different sections; for example one room can tangent you off into Tartarus where you can commune with different beings
+
+## Monsters
+Chimera
+Manticore
+Gorgons
+Hydra
+Multi-headed Dog
+Stymphalian Birds
+Nemean Lion
+Man-eating sheep that guarded the golden fleece
+- Sheep are chill until you try to go through
+- Going past sheep are their only option - two paths and sheep seem like the easy road, but they are vicious
+Mares of Diomedes
+Erymanthian Boar
+Giants
+Cretan bulls
+Cyclopes
+
+## NPCS
+When you save a named NPC, they are transported to Crete and you cannot save them again. However unnamed hostages can be saved repeatedly.
+Samuari NPC whose help you can request for boss fights
+
+You can make NPCs hostile by provoking them. Some NPCs are stronger than you think. You don't HAVE to kill (all) NPCs to leave the room, but if you return to the room, they will continue to be hostile. Some NPCs can be placated with items.
+
+ROBUST DIALOGUE!!!
 
 ### [DEMO] Level 1 - Golden Age Greece
 
