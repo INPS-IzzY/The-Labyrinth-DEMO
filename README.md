@@ -121,6 +121,26 @@ You can make NPCs hostile by provoking them. Some NPCs are stronger than you thi
 
 ROBUST DIALOGUE!!!
 
+## Prometheus Encounter Room
+- You meet Prometheus on his cliff, it is a one way room so it has no exits except the entrance. Prometheus gives you a quest to retrieve the divine flame; it is in the chinese mythology section
+
+## Shops: Eshu
+Sells maps, minor quest items. Guides the NPC, very chatty
+Has his own quest
+Can only spawn in rooms where there have been three or more connections to that room throughout the game so far.
+
+## Sublevels 
+### Hephaestus
+Heph sells containers of ambrosia, weapons
+Cyclops level
+Robot Dogs
+Automatons
+Divine Fire of Prometheus (optional)
+Typhon: staircase between you and typhon.
+You can talk to Typhon and he'll give you a quest
+
+### Tartarus
+
 ### [DEMO] Level 1 - Golden Age Greece
 
 #### Section 1.1
