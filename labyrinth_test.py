@@ -28,3 +28,38 @@
 
 # - Can interact with NPCs (e.g., talk to Ariadne, ask for hints [e]
 # - Can check inventory [I]
+
+import pygame
+import sys
+import math
+import random
+import time
+
+pygame.init()
+pygame.font.init()
+
+SCREEN_WIDTH = 1280
+SCREEN_HEIGHT = 720
+
+class Scene:
+    def handle_event(self, ev): pass
+    def update(self): pass
+    def draw(self, surf): pass
+
+class MenuScene(Scene):
+    def __init__(self, game):
+        self.game = game
+        self.options = ["PLAY", "QUIT"]
+        self.sel = 0
+
+class Game:
+    def __init__(self):
+        self.screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
+        pygame.display.set_caption("The Labyrinth")
+        self.scene: Scene = MenuScene(self)
+
+    def run(self):
+        while True:
+            self.scene.draw(self.screen)
+if __name__ == "__main__":
+    Game().run()

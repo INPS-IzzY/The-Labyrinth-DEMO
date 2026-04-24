@@ -251,7 +251,7 @@ Each room has monsters
 
 If you don't talk to Ariadne, you can still go through the labyrinth, but when you die you go to Hades
 
-If you skip rooms, if you get pulled back to the start via the golden thread, you can still be hit by monsters on the way out
+If you skip rooms, if you get pulled back to the start via the thread, you can still be hit by monsters on the way out
 
 # Hades
 Either a long-endurance challenge or a high-difficulty encounter
