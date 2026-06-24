@@ -32,10 +32,13 @@
 import pygame
 import sys
 import math
-import random
+import random as ran
 import time
+from mobs.enemies import Siren
+from plyr import Theseus
 
 pygame.init()
+pygame.display.init()
 pygame.font.init()
 
 SCREEN_WIDTH = 1280
@@ -58,8 +61,24 @@ class Game:
         pygame.display.set_caption("The Labyrinth")
         self.scene: Scene = MenuScene(self)
 
+    def sirens(self):
+        Sireny = Siren(12,21)
+        Sireny.render(self.screen)
+    
+    def Theseus(self):
+        Theseus = Theseus(1000,680)
+        Theseus.render(self.screen)
+
     def run(self):
         while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+            self.screen.fill((255, 255, 255))
             self.scene.draw(self.screen)
+            self.sirens()
+            self.Theseus()
+            pygame.display.flip()
 if __name__ == "__main__":
     Game().run()
