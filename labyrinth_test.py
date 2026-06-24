@@ -66,8 +66,9 @@ class Game:
         Sireny.render(self.screen)
     
     def Theseus(self):
-        Theseus = Theseus(1000,680)
-        Theseus.render(self.screen)
+        self.theo = Theseus(640,360)
+        self.theo.render(self.screen)
+        
 
     def run(self):
         while True:
@@ -79,6 +80,9 @@ class Game:
             self.scene.draw(self.screen)
             self.sirens()
             self.Theseus()
+            keys = pygame.key.get_pressed()
+            self.theo.move(keys)
+            self.theo.render(self.screen)
             pygame.display.flip()
 if __name__ == "__main__":
     Game().run()
