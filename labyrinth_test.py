@@ -29,6 +29,9 @@
 # - Can interact with NPCs (e.g., talk to Ariadne, ask for hints [e]
 # - Can check inventory [I]
 
+"""IMPORTANT .\.venv312\Scripts\Activate.ps1
+python labyrinth_test.py"""
+
 import pygame
 import sys
 import math
@@ -43,6 +46,7 @@ pygame.font.init()
 
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
+#plyr cant go passed 0 or 1280 on the x axis, and 0 or 720 on the y axis
 
 class Scene:
     def handle_event(self, ev): pass
@@ -62,15 +66,35 @@ class Game:
         self.scene: Scene = MenuScene(self)
 
     def sirens(self):
-        Sireny = Siren(12,21)
+        Sireny = Siren(12,310)
         Sireny.render(self.screen)
-    
-    def Theseus(self):
+
+    def sirensMove(self):
+        self.Sireny.move(time.sleep(1))
+        self.Sireny.render(self.screen)
+
+    def TheseusInitial(self):
         self.theo = Theseus(640,360)
         self.theo.render(self.screen)
-        
+
+    def TheseusMove(self):
+        keys = pygame.key.get_pressed()
+        self.theo.move(keys)
+        self.theo.render(self.screen)
+
+    #def Update(self):
+    
+
+    def ground(self):
+        self.image = pygame.image.load("ground.jpg").convert_alpha()
+        self.image = pygame.transform.scale(self.image, (1280, 210))
+        self.screen.blit(self.image, (0, 510))
 
     def run(self):
+        
+        self.TheseusInitial()
+        self.sirens()
+        
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -78,11 +102,12 @@ class Game:
                     sys.exit()
             self.screen.fill((255, 255, 255))
             self.scene.draw(self.screen)
-            self.sirens()
-            self.Theseus()
-            keys = pygame.key.get_pressed()
-            self.theo.move(keys)
-            self.theo.render(self.screen)
+            self.TheseusMove()
+            
+            self.sirensMove()
+            self.ground()
             pygame.display.flip()
+            
+
 if __name__ == "__main__":
     Game().run()

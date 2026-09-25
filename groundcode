@@ -1,0 +1,5 @@
+def ground():
+        def __init__(self, x, y):
+            super().__init__(x, y)
+            self.image = pygame.image.load("ground.png").convert_alpha()
+            (self.image)
