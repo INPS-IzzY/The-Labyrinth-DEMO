@@ -1,4 +1,4 @@
-# Pseudocode
+"""# Pseudocode
 
 # Start function
 
@@ -29,6 +29,10 @@
 # - Can interact with NPCs (e.g., talk to Ariadne, ask for hints [e]
 # - Can check inventory [I]
 
+#Bugs
+#9/24 siren moves correctly but does not flip and stil registers as going the same direction even though it goes a diff direciton
+Harpy not rendering
+"""
 """IMPORTANT .\.venv312\Scripts\Activate.ps1
 python labyrinth_test.py"""
 
@@ -37,7 +41,7 @@ import sys
 import math
 import random as ran
 import time
-from mobs.enemies import Siren
+from mobs.enemies import Harpy, Siren
 from plyr import Theseus
 
 pygame.init()
@@ -66,13 +70,18 @@ class Game:
         self.scene: Scene = MenuScene(self)
 
     def sirens(self):
-        Sireny = Siren(12,310)
-        Sireny.render(self.screen)
-
-    def sirensMove(self):
-        self.Sireny.move(time.sleep(1))
+        self.Sireny = Siren(12,310)
         self.Sireny.render(self.screen)
 
+    def sirensMove(self):
+        self.Sireny.move()
+        self.Sireny.render(self.screen)
+        print(self.Sireny.x)
+
+    def harpy(self):
+        self.harp = Harpy(500,100)
+        self.harp.render(self.screen)
+    
     def TheseusInitial(self):
         self.theo = Theseus(640,360)
         self.theo.render(self.screen)
@@ -94,6 +103,7 @@ class Game:
         
         self.TheseusInitial()
         self.sirens()
+        self.harpy()
         
         while True:
             for event in pygame.event.get():
@@ -103,7 +113,6 @@ class Game:
             self.screen.fill((255, 255, 255))
             self.scene.draw(self.screen)
             self.TheseusMove()
-            
             self.sirensMove()
             self.ground()
             pygame.display.flip()

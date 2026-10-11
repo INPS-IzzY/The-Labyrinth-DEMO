@@ -1,4 +1,6 @@
 import pygame
+import time
+import math
 
 class plyr:
     #Theseus
@@ -14,11 +16,24 @@ class plyr:
         else:
             surface.blit(pygame.transform.flip(self.image, True, False), (self.x, self.y))
 
-    def move(self, keys, speed = 5):
+    def cooldown():
+        seconds = 0
+        while seconds <= 100:
+            seconds += 1
+            print(seconds)
+        return seconds
+    
+    def move(self, keys, speed = 1.5):
         if keys[pygame.K_w]:
+            #jump: plyr goes up to climax of the jump, then falls back down to the ground, 
+            #note: this key is disabled for a few seconds until the player reaches the ground
             self.y -= speed
+            seconds = self.cooldown()
+            if seconds % 100 == 0:
+                self.y += speed
             if self.y < 0:
                 self.y += (speed * 5)
+                
         if keys[pygame.K_d]:
             self.x += speed
             self.facing = True
