@@ -16,7 +16,7 @@ class plyr:
         else:
             surface.blit(pygame.transform.flip(self.image, True, False), (self.x, self.y))
 
-    def cooldown():
+    def cooldown(self):
         seconds = 0
         while seconds <= 100:
             seconds += 1

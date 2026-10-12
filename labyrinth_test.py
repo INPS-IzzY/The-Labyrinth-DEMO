@@ -33,8 +33,6 @@
 #9/24 siren moves correctly but does not flip and stil registers as going the same direction even though it goes a diff direciton
 Harpy not rendering
 """
-"""IMPORTANT .\.venv312\Scripts\Activate.ps1
-python labyrinth_test.py"""
 
 import pygame
 import sys
@@ -43,6 +41,7 @@ import random as ran
 import time
 from mobs.enemies import Harpy, Siren
 from plyr import Theseus
+
 
 pygame.init()
 pygame.display.init()
@@ -114,6 +113,7 @@ class Game:
             self.scene.draw(self.screen)
             self.TheseusMove()
             self.sirensMove()
+            self.harpy()
             self.ground()
             pygame.display.flip()
             
